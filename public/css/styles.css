@@ -1,0 +1,27 @@
+body, text{
+    background-color: rgba(243, 226, 194, 0.61);
+    color: rgb(243, 116, 116);
+    text-shadow: 2mm;
+    display: block;
+    margin:auto; 
+    text-align: center;
+     
+}
+ul{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: space-between;
+        margin-bottom: 20px;
+}
+nav a{
+    color: #866e6e;
+  
+    padding: 14px 26px;
+    text-decoration: none;
+
+}
+a{
+    text-decoration: none;
+    color: #866e6e;
+}

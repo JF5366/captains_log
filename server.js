@@ -17,11 +17,22 @@ app.engine('jsx', createEngine())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 
+app.use((req, red, next) => {
+    console.log('inside middleware')
+    console.log(`${req.method} ${req.path}`)
+    next()
+})
+
 app.use(methodOverride('_method'))
 
-const captainRoutes = require('./routes/CaptainsRoutes')
-app.use('/logs', captainRoutes)
 
+
+
+const captainRoutes = require('./routes/CaptainsRoutes')
+const foodRoutes = require('./routes/foodLogRoutes')
+
+app.use('/logs', captainRoutes)
+app.use('/food', foodRoutes)
 
 
 

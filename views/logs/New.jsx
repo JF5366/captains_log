@@ -1,9 +1,11 @@
 import React from 'react'
+import DefaultLayout from '../layouts/DefaultLayout';
 
 function New() {
     return ( 
-        <div>
-            <h1>New Log</h1>
+        <DefaultLayout title="New View">
+            <div>
+            <h1>New Captains Log</h1>
             <form action="/logs" method="POST">
                 <label htmlFor="ttl">Title:</label><br />
                 <input type="text" id="ttl" name="title" /><br /><br />
@@ -17,6 +19,7 @@ function New() {
                 <input type="submit"/>
             </form>
         </div>
+        </DefaultLayout>
     );
 }
 
