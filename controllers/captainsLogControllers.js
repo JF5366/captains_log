@@ -41,10 +41,10 @@ module.exports.create = async(req, res) => {
 }
 
 module.exports.delete = async (req, res) => {
-    console.log('DELETE /fruits/:name')
+    console.log('DELETE /logs/:id')
     try{
-    await Fruit.findByIdAndDelete(req.params.id)
-    res.redirect('/fruits')
+    await CaptainsLog.findByIdAndDelete(req.params.id)
+    res.redirect('/logs')
     }catch(err){
         console.log(err)
         res.send(err.message)

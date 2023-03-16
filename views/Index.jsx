@@ -9,7 +9,8 @@ function Index(props) {
             {props.logs.map((item, index) =>
                 <ul>
                     <li>
-                        <a href={`/logs/${item._id}`}>{item.title}</a>
+                        <a href={`/logs/${item._id}`}>
+                            {item.title} {''} </a>
                     </li>
                 </ul>
             )}
